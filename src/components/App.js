@@ -2,18 +2,19 @@
  import '../styles/App.scss';
  import { useState } from 'react';
 
+let countClick = parseInt(0);
+
  function App() {
   // Clase 2
-  const [number, numberOfErrors] = useState(0);
-
+  const [number, setNumberOfErrors] = useState(0);
+  // const [countClick, setCountClick] = useState(0);
+  
   const handleButtonIncrementar = () => {
-    numberOfErrors(+ 1);
+    countClick += 1;
+    setNumberOfErrors(countClick);
+
     console.log(number);
   }
-//   const renderDoll = () => {
-// if (dummy === `error- +number`)
-//   }
-
 
    return (
         <div className="page">
