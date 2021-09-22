@@ -2,18 +2,13 @@
  import '../styles/App.scss';
  import { useState } from 'react';
 
-let countClick = parseInt(0);
-
  function App() {
-  // Clase 2
-  const [number, setNumberOfErrors] = useState(0);
-  // const [countClick, setCountClick] = useState(0);
+  // Variable de conteo
+  const [number, setNumberOfErrors] = useState(1);
   
-  const handleButtonIncrementar = () => {
-    countClick += 1;
-    setNumberOfErrors(countClick);
-
-    console.log(number);
+  const handleClickPlus = () => {
+    setNumberOfErrors(number + 1)
+    console.log(number)
   }
 
    return (
@@ -76,7 +71,7 @@ let countClick = parseInt(0);
               <span className="error-1 line"></span>
             </section>
 
-            <button onClick={handleButtonIncrementar}>Incrementar</button>
+            <button onClick={handleClickPlus}>Incrementar</button>
           </main>
 
         </div>
